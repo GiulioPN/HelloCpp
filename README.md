@@ -24,7 +24,7 @@ cmake -B build -S .
 Finally, to execute the target
 
 ```bash
-./build/appsrc/HelloCpp
+./build/bin/HelloCpp
 ```
 
 ## About CMake

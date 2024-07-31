@@ -9,4 +9,6 @@ if(Boost_FOUND)
   message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
 endif()
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 add_subdirectory(appsrc)
