@@ -9,6 +9,4 @@ if(Boost_FOUND)
   message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
 endif()
 
-add_executable(HelloCpp HelloCpp.cpp)
-
-target_link_libraries(HelloCpp PRIVATE Boost::headers)
+add_subdirectory(appsrc)
