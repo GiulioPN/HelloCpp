@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-project(HelloCpp)
+project(
+  HelloCpp
+  VERSION 0.2
+  DESCRIPTION "An Hello Word project with CMake"
+  LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
