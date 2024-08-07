@@ -1,3 +1,3 @@
 add_subdirectory(appsrc)
 
-#add_subdirectory(libsrc)
+add_subdirectory(libsrc)
