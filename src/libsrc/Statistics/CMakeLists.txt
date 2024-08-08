@@ -10,6 +10,15 @@ target_include_directories(statistics PUBLIC
 # Link an external library as a private dependency to the current library target
 target_link_libraries(statistics PRIVATE Boost::headers)
 
+# Compile the cmake object library target in a shared library
+set_target_properties(statistics PROPERTIES
+    PUBLIC_HEADER src/libsrc/Statistics/include/Statistics/DescriptiveStatistics.hpp
+    POSITION_INDEPENDENT_CODE 1
+)
+
+add_library(statistics_shared SHARED)
+target_link_libraries(statistics_shared statistics)
+
 # Compile the cmake object library target in a static library
 add_library(statistics_static STATIC)
 target_link_libraries(statistics_static statistics)

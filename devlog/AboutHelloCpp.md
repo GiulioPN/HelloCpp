@@ -56,6 +56,8 @@ The statistics library separate their code in the implementation detail (`Descri
 
 Starting form the statisitcs object library a static library is created and placed in the appropriate build folder.
 
+Starting form the statisitcs object library a shared library is created and placed in the appropriate build folder.
+
 ## 4. The CMake Application file
 
 It just simply create the executable target using the `add_executable()` command and link the executable target to the statistic static library target.
