@@ -7,5 +7,9 @@ target_include_directories(statistics PUBLIC
   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
 
-# Linke external library as a private dependency to the current library target
+# Link an external library as a private dependency to the current library target
 target_link_libraries(statistics PRIVATE Boost::headers)
+
+# Compile the cmake object library target in a static library
+add_library(statistics_static STATIC)
+target_link_libraries(statistics_static statistics)

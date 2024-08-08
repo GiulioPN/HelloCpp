@@ -54,6 +54,8 @@ This CMake scripts contains only the command `add_subdirectory()` which adds a s
 
 The statistics library separate their code in the implementation detail (`DescriptiveStatistics.cpp`) and its header (`DescriptiveStatistics.cpp`). The library is compiled as a _cmake object library_. An Object Library is a collection of source files compiled into an object file which is not linked into a library file or made into an archive.
 
+Starting form the statisitcs object library a static library is created and placed in the appropriate build folder.
+
 ## 4. The CMake Application file
 
-It just simply create the executable target using the `add_executable()` command and link the executable target to the statistic object library target.
+It just simply create the executable target using the `add_executable()` command and link the executable target to the statistic static library target.
