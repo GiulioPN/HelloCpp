@@ -1,13 +1,11 @@
-add_library(statistics INTERFACE)
+# Create a cmake object library target
+add_library(statistics OBJECT DescriptiveStatistics.cpp)
 
-target_include_directories(statistics INTERFACE
+# Add include directories to a target
+target_include_directories(statistics PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
 
-set_target_properties(statistics PROPERTIES
-    PUBLIC_HEADER src/libsrc/Statistics/include/Statistics/DescriptiveStatistics.hpp
-    POSITION_INDEPENDENT_CODE 1
-)
-
-target_link_libraries(statistics INTERFACE Boost::headers)
+# Linke external library as a private dependency to the current library target
+target_link_libraries(statistics PRIVATE Boost::headers)

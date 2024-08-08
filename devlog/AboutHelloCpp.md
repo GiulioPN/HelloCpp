@@ -50,6 +50,10 @@ In this project the CMake project script sets up a project named "HelloCpp" with
 
 This CMake scripts contains only the command `add_subdirectory()` which adds a subdirectory to the build.
 
-## 3. The library CMake
+## 3. The CMake library file
 
-At the moment the library is a header-only. This means that the _cmake interface library target_ is used.
+The statistics library separate their code in the implementation detail (`DescriptiveStatistics.cpp`) and its header (`DescriptiveStatistics.cpp`). The library is compiled as a _cmake object library_. An Object Library is a collection of source files compiled into an object file which is not linked into a library file or made into an archive.
+
+## 4. The CMake Application file
+
+It just simply create the executable target using the `add_executable()` command and link the executable target to the statistic object library target.

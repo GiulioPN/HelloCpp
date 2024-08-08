@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(
   HelloCpp
-  VERSION 0.2
+  VERSION 0.3
   DESCRIPTION "An Hello Word project with CMake"
   LANGUAGES CXX)
 
@@ -14,5 +14,6 @@ if(Boost_FOUND)
 endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+# set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 add_subdirectory(src)
